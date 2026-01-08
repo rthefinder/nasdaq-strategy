@@ -1,0 +1,32 @@
+node_modules/
+.DS_Store
+.env
+.env.local
+.env.*.local
+.turbo/
+dist/
+build/
+target/
+.next/
+.solana/
+*.log
+yarn-error.log
+npm-debug.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Solana
+sol/
+.anchor/
+.program-artifacts/
+
+# Testing
+coverage/
+.nyc_output/
+
+# OS
+Thumbs.db

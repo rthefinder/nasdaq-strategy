@@ -1,0 +1,49 @@
+name: Deploy to Devnet
+
+on:
+  push:
+    branches: [develop]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Install Solana CLI
+        run: |
+          sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
+          export PATH="/home/runner/.local/share/solana/install/active_release/bin:$PATH"
+          solana --version
+
+      - name: Install Anchor
+        run: |
+          npm install -g @coral-xyz/anchor-cli
+
+      - name: Build programs
+        run: |
+          cd programs/nasdaq_strategy_core && anchor build
+          cd ../nasdaq_strategy_treasury && anchor build
+
+      - name: Deploy to Devnet
+        run: |
+          export SOLANA_KEYPAIR=~/.config/solana/devnet.json
+          # In real deployment, this would use actual keypair from secrets
+          echo "Deployment would occur here"
+          echo "Programs built successfully"
+
+      - name: Post deployment summary
+        if: always()
+        run: |
+          echo "## Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Network**: Devnet" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY

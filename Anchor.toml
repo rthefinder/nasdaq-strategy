@@ -1,0 +1,24 @@
+[toolchain]
+channel = "stable"
+
+[build]
+shell = "/bin/bash"
+
+[programs.devnet]
+nasdaq_strategy_core = "5GW9VZvakFrYrLHiNVmLBEY6M5tBMjWZMPMWCHBY8RZH"
+nasdaq_strategy_treasury = "2PBFG7KwBGGzUPH5rC4XLMhQwKhPy8yHvUkq5L2WnQ1u"
+
+[programs.testnet]
+nasdaq_strategy_core = "5GW9VZvakFrYrLHiNVmLBEY6M5tBMjWZMPMWCHBY8RZH"
+nasdaq_strategy_treasury = "2PBFG7KwBGGzUPH5rC4XLMhQwKhPy8yHvUkq5L2WnQ1u"
+
+[programs.mainnet]
+nasdaq_strategy_core = "5GW9VZvakFrYrLHiNVmLBEY6M5tBMjWZMPMWCHBY8RZH"
+nasdaq_strategy_treasury = "2PBFG7KwBGGzUPH5rC4XLMhQwKhPy8yHvUkq5L2WnQ1u"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "bash -c 'yarn run ts-mocha --timeout 60000 \"tests/**/*.test.ts\"'"

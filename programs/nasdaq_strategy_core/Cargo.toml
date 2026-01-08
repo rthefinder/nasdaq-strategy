@@ -1,0 +1,19 @@
+[package]
+name = "nasdaq_strategy_core"
+version = "0.1.0"
+description = "Core token program for nasdaq-strategy memecoin"
+edition = "2021"
+
+[dependencies]
+anchor-lang = "0.29"
+anchor-spl = "0.29"
+solana-program = "1.17"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "nasdaq_strategy_core"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

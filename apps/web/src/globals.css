@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100;
+}
+
+a {
+  @apply text-blue-400 hover:text-blue-300 transition-colors;
+}
+
+button {
+  @apply transition-all duration-200;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent;
+}
+
+.card {
+  @apply rounded-lg border border-slate-700 bg-slate-900 p-6 shadow-lg;
+}
+
+.metric-card {
+  @apply card relative overflow-hidden;
+}
+
+.metric-card::before {
+  @apply pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent;
+  content: '';
+}
