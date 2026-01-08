@@ -1,4 +1,5 @@
 # nasdaq-strategy
+<img width="950" height="264" alt="Capture d’écran 2026-01-08 à 18 30 25" src="https://github.com/user-attachments/assets/6265f460-350c-49b4-9ec9-8a72ac346358" />
 
 A **memecoin with a balance sheet**. A Solana treasury-backed strategy protocol that progressively accumulates Nasdaq exposure through transparent, deterministic rules.
 
@@ -11,6 +12,7 @@ A **memecoin with a balance sheet**. A Solana treasury-backed strategy protocol 
 ## What is nasdaq-strategy?
 
 nasdaq-strategy is a **crypto-native strategy protocol** that combines memecoin mechanics with treasury-backed fundamentals. Over time, it graduates from pure memecoin to fully-backed, redeemable NAV-based asset.
+<img width="747" height="1025" alt="Capture d’écran 2026-01-08 à 18 41 41" src="https://github.com/user-attachments/assets/7fa6ffcf-d9e8-4bc6-833f-35f750d659cc" />
 
 ### Key Characteristics
 
@@ -70,6 +72,7 @@ Supply gradually contracts toward fully-backed equilibrium.
 ```
 
 ## Treasury Security Model
+<img width="745" height="1018" alt="Capture d’écran 2026-01-08 à 18 43 05" src="https://github.com/user-attachments/assets/5f082be5-6d5f-463e-b4a4-9885eb9a479e" />
 
 ### Fixed Rules (Immutable at Launch)
 
